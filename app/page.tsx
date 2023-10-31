@@ -5,8 +5,8 @@ export default async function Root({
   searchParams,
   testing,
 }: {
-  searchParams: any;
-  testing: any;
+  searchParams: string;
+  testing: string;
 }) {
   return (
     <ClientOnly>
