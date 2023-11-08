@@ -1,20 +1,11 @@
-import ClientOnly from './_components/ClientOnly';
-import Container from './_components/Container';
+import ClientOnly from '@/components/ClientOnly';
+import Media from '@/components/Media';
 
-export default async function Root({
-  searchParams,
-  testing,
-}: {
-  searchParams: string;
-  testing: string;
-}) {
+export default function Root() {
   return (
     <ClientOnly>
-      <Container>
-        <div>
-          <h1>Hello world</h1>
-        </div>
-      </Container>
+      <h1>Root page</h1>
+      <Media />
     </ClientOnly>
   );
 }

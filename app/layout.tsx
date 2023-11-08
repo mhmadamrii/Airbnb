@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
-import ClientOnly from './_components/ClientOnly';
-import Navbar from './_components/navbar/Navbar';
-
 const inter = Nunito({ subsets: ['latin'] });
+import QueryProvider from '@/components/QueryProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,11 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ClientOnly>
-        <Navbar />
-      </ClientOnly>
       <body className={inter.className}>
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="pb-20 pt-28">
+          <QueryProvider>{children}</QueryProvider>
+        </div>
       </body>
     </html>
   );
