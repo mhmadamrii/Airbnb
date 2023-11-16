@@ -37,28 +37,17 @@ export default function UserMenu({ currentUser }: { currentUser: any }) {
       <div className="flex flex-row items-center gap-3">
         <div
           onClick={onRent}
-          className="
-            hidden
-            cursor-pointer
-            rounded-full 
-            px-4 
-            py-3 
-            text-sm 
-            font-semibold 
-            transition 
-            hover:bg-neutral-100 
-            md:block
-          "
+          className="hidden cursor-pointer rounded-full px-4 py-3 text-sm font-semibold transition hover:bg-neutral-100 md:block"
         >
           Airbnb your home
         </div>
         <div
           onClick={toggleOpen}
           className="
-          flex
+          flex 
           cursor-pointer
-          flex-row
-          items-center 
+          flex-row 
+          items-center
           gap-3 
           rounded-full 
           border-[1px] 
