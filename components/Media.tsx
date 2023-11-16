@@ -47,7 +47,6 @@ export default function Media() {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    console.log(e.target.value);
     e.preventDefault();
     setInput((prevState) => ({
       ...prevState,
