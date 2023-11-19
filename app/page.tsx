@@ -11,3 +11,5 @@ export default async function Root({
     </div>
   );
 }
+
+// tutorial from here: https://www.youtube.com/watch?v=u6PQ5xZAv7Q
