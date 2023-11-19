@@ -2,10 +2,6 @@ import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
 
-import ClientOnly from './_components/ClientOnly';
-import Navbar from './_components/navbar/Navbar';
-import Modal from './_components/modals/Modal';
-
 const inter = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -20,12 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ClientOnly>
-        <Navbar />
-        <Modal isOpen />
-      </ClientOnly>
       <body className={inter.className}>
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="h-screen bg-slate-700 pb-20 pt-28 text-white">
+          {children}
+        </div>
       </body>
     </html>
   );
