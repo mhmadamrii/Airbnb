@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
-import ClientOnly from './_components/ClientOnly';
-import Navbar from './_components/navbar/Navbar';
 
 const inter = Nunito({ subsets: ['latin'] });
 
@@ -18,11 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ClientOnly>
-        <Navbar />
-      </ClientOnly>
       <body className={inter.className}>
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="h-full bg-slate-700 text-white">{children}</div>
       </body>
     </html>
   );
