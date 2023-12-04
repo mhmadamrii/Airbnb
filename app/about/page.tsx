@@ -1,10 +1,15 @@
-import Link from 'next/link';
-
 export default function About() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <Link href="/">Homepage</Link>
-    </div>
+    <>
+      <div>
+        About page
+        <button>click me</button>
+      </div>
+
+      <div>
+        <label htmlFor="randomTxt">Enter random text</label>
+        <input id="randomTxt" />
+      </div>
+    </>
   );
 }
