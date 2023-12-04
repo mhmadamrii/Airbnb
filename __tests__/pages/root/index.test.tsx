@@ -11,6 +11,7 @@ describe('Our dashboard page', () => {
     const headerText = 'Hello world';
 
     expect(header).toHaveTextContent(headerText);
+    expect(header).toBeInTheDocument();
   });
 
   it('Should have disable button', () => {
