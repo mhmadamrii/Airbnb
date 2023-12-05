@@ -1,7 +1,3 @@
 export default function Loading() {
-  return (
-    <div>
-      <h1>Loading screen</h1>
-    </div>
-  );
+  return <h1>Ini loading yang dari component loading...</h1>;
 }

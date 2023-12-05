@@ -1,4 +1,6 @@
+import DataLorem from '@/components/DataLorem';
 import Button from '@/components/button';
+import { Suspense } from 'react';
 
 export default function Root() {
   return (
@@ -19,6 +21,13 @@ export default function Root() {
           eius veniam laudantium delectus.
         </p>
         <Button title="Submit here!" />
+      </div>
+
+      <div>
+        <h1 className="text-2xl">List datas</h1>
+        <Suspense fallback={<h1>Loading stream....</h1>}>
+          <DataLorem />
+        </Suspense>
       </div>
     </div>
   );
