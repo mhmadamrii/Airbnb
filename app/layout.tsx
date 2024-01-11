@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
+import Link from 'next/link';
 
 const inter = Nunito({ subsets: ['latin'] });
 
@@ -17,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="pb-20 pt-28">{children}</div>
+        <Link href="/" className="block">
+          home
+        </Link>
+        <Link href="/dashboard">dashboard</Link>
+        <div>{children}</div>
       </body>
     </html>
   );
