@@ -1,28 +1,20 @@
-import Testing from '@/components/testing';
+import React from 'react';
+import FormUser from '@/components/form-user';
+import { prisma } from '@/config/prisma';
 
-const handlePost = async () => {
-  try {
-    const data = await fetch('/api/todos', { method: 'POST' });
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-/* 
- *  testing doang
- *
- * */
-
-
-
-export default async function Home() {
-  const data = await handlePost();
-  console.log(data);
+export default async function App() {
+  const users = await prisma.user.findMany();
+  const posts = await prisma.post.findMany();
+  console.log(users);
   return (
     <div>
-      <h1>homescreen</h1>
-      <Testing />
+      <h1>Hello world</h1>
+      <FormUser />
+      {posts.map((item: any, idx: number) => (
+        <h1 key={idx} className="text-4xl">
+          {item.title}
+        </h1>
+      ))}
     </div>
   );
 }
